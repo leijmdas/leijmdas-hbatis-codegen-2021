@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes>
+    <node name="EMP" type="sqlite">
+        <item name="ID"      type="STRING" value="s1|s2|s3"/>
+        <item name="YEAR"    type="LONG"   value="11|22|33"/>
+        <item name="DAY "    type="DATE"   value="20180101|2018-1-2"/>
+
+    </node>
+    <node name="DPT" type="table">
+        <item name="ID"     type="STRING" value="sdds"/>
+        <item name="name"   type="STRING" value="dd"/>
+
+    </node>
+</nodes>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes>
+    <node name="ytb_account" type='mysql'>
+
+        <item name="url" value="jdbc:mysql://192.168.4.112:3306/ytb_account?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai"/>
+        <item name="user" value="ytb"/>
+        <item name="pwd" value="12345"/>
+        <item name="driver" value="com.mysql.cj.jdbc.Driver"/>
+    </node>
+    <node name="ytb_user" type='mysql'>
+
+        <item name="url" value="jdbc:mysql://192.168.4.112:3306/ytb_user?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai"/>
+        <item name="user" value="ytb"/>
+        <item name="pwd" value="12345"/>
+        <item name="driver" value="com.mysql.cj.jdbc.Driver"/>
+    </node>
+    <node name="ytb_manager" type='mysql'>
+
+        <item name="url" value="jdbc:mysql://192.168.4.112:3306/ytb_manager?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai"/>
+        <item name="user" value="ytb"/>
+        <item name="pwd" value="12345"/>
+        <item name="driver" value="com.mysql.cj.jdbc.Driver"/>
+    </node>
+    <node name="ytb_project" type='mysql'>
+
+        <item name="url" value="jdbc:mysql://192.168.4.112:3306/ytb_project?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai"/>
+        <item name="user" value="ytb"/>
+        <item name="pwd" value="12345"/>
+        <item name="driver" value="com.mysql.cj.jdbc.Driver"/>
+    </node>
+
+    <node name="mysql" type='mysql'>
+
+        <item name="url" value="jdbc:mysql://192.168.4.112:3306/ytb_manager?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai"/>
+        <item name="user" value="ytb"/>
+        <item name="pwd" value="12345"/>
+        <item name="driver" value="com.mysql.cj.jdbc.Driver"/>
+    </node>
+
+    <node name="sqlite" type='sqlite'>
+        <item name="url" value="jdbc:sqlite:db/testdb.s3db"/>
+        <item name="user" value=""/>
+        <item name="pwd" value=""/>
+        <item name="driver" value="org.sqlite.JDBC"/>
+    </node>
+
+
+    <node name="postgresql" type='postgresql'>
+
+        <item name="url" value="jdbc:postgresql://127.0.0.1:5432/dbljm"/>
+        <item name="user" value="postgres"/>
+        <item name="pwd" value="1"/>
+        <item name="driver" value="org.postgresql.Driver"/>
+    </node>
+
+
+</nodes>

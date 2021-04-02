@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration scan="true" scanPeriod="120000 seconds">
+    <!--设置日志输出为控制台-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{userId}] [%X{requestId}] %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--设置日志输出为文件-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>./logs/ytb_service.log</File>
+        <rollingPolicy  class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>./logs/zip/ytb_service.%d{yyyy-MM-dd_HH-mm}.log
+                .zip</FileNamePattern>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{32} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+
+    <appender name="YTBERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>./logs/ytb_error.log</File>
+        <rollingPolicy  class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>./logs/zip/ytb_error.%d{yyyy-MM-dd_HH-mm}.log
+                .zip</FileNamePattern>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{32} - %msg%n</Pattern>
+        </layout>
+    </appender>
+    <appender name="JTEST" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>./logs/ytb_jtest.log</File>
+        <rollingPolicy  class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>./logs/zip/ytb_jtest.%d{yyyy-MM-dd_HH-mm}.log
+                .zip</FileNamePattern>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{32} - %msg%n</Pattern>
+        </layout>
+    </appender>
+    <appender name="YTBDEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>./logs/ytb_debug.log</File>
+        <rollingPolicy  class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>./logs/zip/ytb_debug.%d{yyyy-MM-dd_HH-mm}.log
+                .zip</FileNamePattern>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{32} - %msg%n</Pattern>
+        </layout>
+    </appender>
+    <appender name="user" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>./logs/ytb_user.log</File>
+        <rollingPolicy  class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>./logs/zip/ytb_user.%d{yyyy-MM-dd_HH-mm}.log
+                .zip</FileNamePattern>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{32} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <appender name="YTBRUN" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>./logs/ytb_run.log</File>
+        <rollingPolicy  class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>./logs/zip/ytb_run.%d{yyyy-MM-dd_HH-mm}.log
+                .zip</FileNamePattern>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{32} - %msg%n</Pattern>
+        </layout>
+    </appender>
+
+    <root>
+        <level value="ERROR"/>
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+    <logger name="ytbrun" level="INFO" additivity="false">
+        <appender-ref ref="YTBRUN"/>
+
+    </logger>
+
+    <!-- 测试多文件日志打印 -->
+    <logger name="ytbdebug" level="DEBUG" additivity="false">
+        <appender-ref ref="YTBDEBUG"/>
+
+    </logger>
+    <logger name="ytberror" level="INFO" additivity="false">
+        <appender-ref ref="YTBERROR"/>
+
+    </logger>
+
+    <!-- 测试多文件日志打印 -->
+    <logger name="jtest" level="DEBUG" additivity="false">
+        <appender-ref ref="JTEST"/>
+
+    </logger>
+    <logger name="user" level="DEBUG" additivity="false">
+        <appender-ref ref="user"/>
+
+    </logger>
+
+
+</configuration>

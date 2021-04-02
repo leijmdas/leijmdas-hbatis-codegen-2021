@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes>
+    <node name="httpclient" type="rest">
+        <item name="url"         value="http://127.0.0.1:8080/testweb.kunshan"/>
+        <item name="contentType" value="application/json"/>
+        <item name="data"        value="{}"/>
+
+    </node>
+
+    <node name="camweb" type='web'>
+        <item name="url" value="http://127.0.0.1:8888/cam"/>
+        <item name="user" value="10008"/>
+        <item name="pwd" value="1"/>
+        <item name="lang" value="china"/>
+        <item name="btype" value="1"/>
+    </node>
+    <node name="ide" type='web'>
+        <item name="url" value="http://127.0.0.1:8888/SDI"/>
+        <item name="user" value="10001"/>
+        <item name="pwd" value="1"/>
+        <item name="lang" value="english"/>
+        <item name="btype" value="2"/>
+    </node>
+    <node name="fi" type='web'>
+        <item name="url" value="http://127.0.0.1:8888/SDI"/>
+        <item name="user" value="10001"/>
+        <item name="pwd" value="1"/>
+        <item name="lang" value="english"/>
+        <item name="btype" value="2"/>
+    </node>
+
+
+</nodes>
